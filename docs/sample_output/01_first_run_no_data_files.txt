@@ -1,0 +1,386 @@
+[INFO] customers.csv not found. Starting with no records.
+[INFO] accounts.csv not found. Starting with no records.
+[INFO] transactions.csv not found. Starting with no records.
+[INFO] Loaded 0 customer(s) and 0 account(s).
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 10
+[INFO] There are no accounts yet.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: abc
+[ERROR] 'abc' is not a valid number. Enter a whole number from 1 to 11.
+Enter choice [1-11]: 99
+[ERROR] Please enter a number from 1 to 11.
+Enter choice [1-11]: 1
+Customer name: Juan Dela Cruz
+Contact number: 09171234567
+[SUCCESS] Registered Juan Dela Cruz with customer ID C-001.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 1
+Customer name: Maria Santos
+Contact number: 09281234567
+[SUCCESS] Registered Maria Santos with customer ID C-002.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 1
+Customer name: J@n 123
+Contact number: 09171234567
+[ERROR] Invalid name. Use 2 to 60 letters (spaces, . ' - allowed; no digits or commas).
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 2
+Customer ID: C-001
+[INFO] Customer: Juan Dela Cruz
+  [1] SAVINGS       minimum opening deposit PHP 500.00
+  [2] CHECKING      minimum opening deposit PHP 1,000.00
+  [3] TIME_DEPOSIT  minimum opening deposit PHP 5,000.00
+Account type [1-3]: 1
+Opening deposit (PHP): 100
+[ERROR] Minimum opening deposit for a SAVINGS account is PHP 500.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 2
+Customer ID: C-001
+[INFO] Customer: Juan Dela Cruz
+  [1] SAVINGS       minimum opening deposit PHP 500.00
+  [2] CHECKING      minimum opening deposit PHP 1,000.00
+  [3] TIME_DEPOSIT  minimum opening deposit PHP 5,000.00
+Account type [1-3]: 1
+Opening deposit (PHP): ten
+[ERROR] Enter a positive amount with up to 2 decimal places, for example 1500 or 1500.50.
+Opening deposit (PHP): -50
+[ERROR] Enter a positive amount with up to 2 decimal places, for example 1500 or 1500.50.
+Opening deposit (PHP): 10000
+[SUCCESS] Opened SAVINGS account A-1001 for Juan Dela Cruz with PHP 10,000.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 2
+Customer ID: C-001
+[INFO] Customer: Juan Dela Cruz
+  [1] SAVINGS       minimum opening deposit PHP 500.00
+  [2] CHECKING      minimum opening deposit PHP 1,000.00
+  [3] TIME_DEPOSIT  minimum opening deposit PHP 5,000.00
+Account type [1-3]: 2
+Opening deposit (PHP): 6000
+[SUCCESS] Opened CHECKING account A-1002 for Juan Dela Cruz with PHP 6,000.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 2
+Customer ID: C-002
+[INFO] Customer: Maria Santos
+  [1] SAVINGS       minimum opening deposit PHP 500.00
+  [2] CHECKING      minimum opening deposit PHP 1,000.00
+  [3] TIME_DEPOSIT  minimum opening deposit PHP 5,000.00
+Account type [1-3]: 3
+Opening deposit (PHP): 50000
+Term in months [1-60]: 12
+[ALERT] Large transaction: DEPOSIT of PHP 50,000.00 on A-1003. Please verify.
+[SUCCESS] Opened TIME_DEPOSIT account A-1003 for Maria Santos with PHP 50,000.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 4
+Account number: A-1001
+Amount to deposit (PHP): 60000
+[ALERT] Large transaction: DEPOSIT of PHP 60,000.00 on A-1001. Please verify.
+[SUCCESS] Deposited PHP 60,000.00 to A-1001. New balance: PHP 70,000.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 5
+Account number: A-1002
+Amount to withdraw (PHP): 9000
+[ERROR] Insufficient funds in A-1002. Short by PHP 1,000.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 5
+Account number: A-1003
+Amount to withdraw (PHP): 1000
+[ERROR] Time deposit A-1003 has not matured. Funds can be withdrawn on 2027-11-21.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 5
+Account number: A-1002
+Amount to withdraw (PHP): 7500
+[ALERT] Low balance: A-1002 now has PHP -1,500.00 (below PHP 500.00).
+[SUCCESS] Withdrew PHP 7,500.00 from A-1002. New balance: PHP -1,500.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 6
+From account: A-1001
+To account: A-1002
+Amount to transfer (PHP): 2000
+[SUCCESS] Transferred PHP 2,000.00 from A-1001 to A-1002.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 6
+From account: A-1001
+To account: A-9999
+Amount to transfer (PHP): 100
+[ERROR] Account not found: A-9999
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 7
+[ALERT] Low balance: A-1002 now has PHP 400.10 (below PHP 500.00).
+Account  Type               Amount      New balance
+----------------------------------------------------
+A-1001   INTEREST          +141.67        68,141.67
+A-1002   INTEREST            +0.10           500.10
+A-1002   FEE               -100.00           400.10
+A-1003   INTEREST          +208.33        50,208.33
+[SUCCESS] Applied 4 interest/fee transaction(s).
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 8
+Account number: A-1002
+
+=== Statement: A-1002 (CHECKING) ===
+Owner : Juan Dela Cruz (C-001)
+Opened: 2026-11-21    Status: OPEN
+Checking: overdraft limit PHP 2,000.00
+
+Date             Txn ID   Type                  Amount        Balance  Description
+----------------------------------------------------------------------------------------
+2026-11-21 11:49 T-00002  DEPOSIT            +6,000.00       6,000.00  Opening deposit
+2026-11-21 11:49 T-00005  WITHDRAWAL         -7,500.00      -1,500.00  Cash withdrawal
+2026-11-21 11:49 T-00007  TRANSFER_IN        +2,000.00         500.00  Transfer from A-1001
+2026-11-21 11:49 T-00009  INTEREST               +0.10         500.10  Monthly interest
+2026-11-21 11:49 T-00010  FEE                  -100.00         400.10  Monthly maintenance fee
+----------------------------------------------------------------------------------------
+Current balance: PHP 400.10
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 9
+Customer ID: C-001
+
+=== Customer Summary ===
+Customer: Juan Dela Cruz (C-001)    Contact: 09171234567
+Account  Type                 Balance  Status
+------------------------------------------------
+A-1001   SAVINGS            68,141.67  OPEN
+A-1002   CHECKING              400.10  OPEN
+------------------------------------------------
+Open accounts: 2    Total balance: PHP 68,541.77
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 10
+
+=== All Accounts ===
+Account  Type          Owner                         Balance  Status
+----------------------------------------------------------------------
+A-1001   SAVINGS       Juan Dela Cruz              68,141.67  OPEN
+A-1002   CHECKING      Juan Dela Cruz                 400.10  OPEN
+A-1003   TIME_DEPOSIT  Maria Santos                50,208.33  OPEN
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 11
+[INFO] Data saved. Goodbye!

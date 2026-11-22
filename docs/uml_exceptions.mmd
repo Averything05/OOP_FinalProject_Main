@@ -1,0 +1,56 @@
+%%{init: {'theme': 'default'}}%%
+classDiagram
+direction TB
+
+class Exception {
+  <<java.lang>>
+}
+class RuntimeException {
+  <<java.lang>>
+}
+class BankException {
+  checked
+}
+class InsufficientFundsException {
+  -double shortfall
+  +getShortfall() double
+}
+class RecordNotFoundException {
+  -String recordType
+  -String recordId
+}
+class TermNotMaturedException {
+  -LocalDate maturityDate
+}
+class CorruptRecordException {
+  checked
+}
+class InvalidRequestException {
+  unchecked
+}
+class InputClosedException {
+  unchecked
+}
+
+Exception <|-- BankException
+Exception <|-- CorruptRecordException
+RuntimeException <|-- InvalidRequestException
+RuntimeException <|-- InputClosedException
+BankException <|-- InsufficientFundsException
+BankException <|-- RecordNotFoundException
+BankException <|-- TermNotMaturedException
+
+class Account
+class BankService
+class DataStore
+class MenuController
+class InputHelper
+Account ..> InsufficientFundsException : throws
+Account ..> TermNotMaturedException : throws (via subclass)
+BankService ..> RecordNotFoundException : throws
+DataStore ..> CorruptRecordException : throws and catches
+Account ..> InvalidRequestException : throws
+InputHelper ..> InputClosedException : throws
+MenuController ..> BankException : catches
+MenuController ..> InvalidRequestException : catches
+MenuController ..> InputClosedException : catches

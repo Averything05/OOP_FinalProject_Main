@@ -1,0 +1,45 @@
+[WARNING] Skipped corrupt record in customers.csv line 5: Invalid name. Use 2 to 60 letters (spaces, . ' - allowed; no digits or commas).
+[WARNING] Skipped corrupt record in accounts.csv line 7: invalid value (For input string: "abc")
+[WARNING] Skipped corrupt record in accounts.csv line 8: expected 7 fields but found 6
+[WARNING] Skipped corrupt record in accounts.csv line 10: invalid value (Text '2026-13-45' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13)
+[WARNING] Skipped account A-1008: unknown customer C-999.
+[WARNING] Skipped corrupt record in transactions.csv line 12: invalid value (No enum constant model.TransactionType.SOMETHING)
+[INFO] Loaded 3 customer(s) and 5 account(s).
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 10
+
+=== All Accounts ===
+Account  Type          Owner                         Balance  Status
+----------------------------------------------------------------------
+A-1001   SAVINGS       Juan Dela Cruz              15,000.00  OPEN
+A-1002   CHECKING      Juan Dela Cruz               8,200.00  OPEN
+A-1003   TIME_DEPOSIT  Maria Santos                50,000.00  OPEN
+A-1004   SAVINGS       Maria Santos                   450.00  OPEN
+A-1005   TIME_DEPOSIT  Pedro Reyes                 20,000.00  OPEN
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 11
+[INFO] Data saved. Goodbye!

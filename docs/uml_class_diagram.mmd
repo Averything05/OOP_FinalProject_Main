@@ -1,0 +1,163 @@
+%%{init: {'theme': 'default'}}%%
+classDiagram
+direction TB
+
+class Account {
+  <<abstract>>
+  -String accountNumber
+  -String customerId
+  -double balance
+  -boolean open
+  -LocalDate openedDate
+  -InterestFeeStrategy strategy
+  -List~Transaction~ history
+  +getType()* String
+  +getTermsDescription()* String
+  #getMinimumAllowedBalance() double
+  #checkWithdrawalAllowed()
+  #checkDepositAllowed()
+  +deposit(double)
+  +withdraw(double)
+  +creditInterest(double)
+  +chargeFee(double) double
+  +close() double
+  +computeMonthlyInterest() double
+  +computeMonthlyFee() double
+  +recordTransaction(Transaction)
+}
+class SavingsAccount
+class CheckingAccount {
+  #getMinimumAllowedBalance() double
+}
+class TimeDepositAccount {
+  -int termMonths
+  +getMaturityDate() LocalDate
+  +isMatured() boolean
+  #checkWithdrawalAllowed()
+  #checkDepositAllowed()
+}
+class Customer {
+  -String id
+  -String name
+  -String contactNumber
+  -List~Account~ accounts
+  +addAccount(Account)
+  +getTotalBalance() double
+}
+class Transaction {
+  -String id
+  -String accountNumber
+  -TransactionType type
+  -double amount
+  -double balanceAfter
+  -LocalDateTime timestamp
+  -String description
+}
+class TransactionType {
+  <<enumeration>>
+  DEPOSIT
+  WITHDRAWAL
+  TRANSFER_IN
+  TRANSFER_OUT
+  INTEREST
+  FEE
+}
+
+class InterestFeeStrategy {
+  <<interface>>
+  +computeInterest(double) double
+  +computeFee(double) double
+}
+class AccountRates {
+  <<enumeration>>
+  SAVINGS
+  CHECKING
+  TIME_DEPOSIT
+}
+
+class AccountObserver {
+  <<interface>>
+  +onTransaction(Account, Transaction)
+  +lowBalance()$ AccountObserver
+  +largeTransaction()$ AccountObserver
+}
+
+class AccountFactory {
+  <<factory>>
+  +openNew(...) Account
+  +restore(...) Account
+}
+class BankConfig {
+  <<singleton>>
+  -BankConfig INSTANCE
+  +getInstance() BankConfig
+  +getLowBalanceThreshold() double
+  +getLargeTransactionThreshold() double
+  +getOverdraftLimit() double
+  +getMinimumOpeningDeposit(String) double
+}
+
+class BankService {
+  -List~AccountObserver~ observers
+  +registerCustomer(...) Customer
+  +openAccount(...) Account
+  +closeAccount(String) double
+  +deposit(String, double)
+  +withdraw(String, double)
+  +transfer(String, String, double)
+  +applyMonthlyCharges() List
+  +addObserver(AccountObserver)
+  +save()
+  +load()
+}
+class Repository~T~ {
+  -Map~String,T~ items
+  -Function idOf
+  +add(T)
+  +findById(String) Optional~T~
+  +findAll() List~T~
+  +findWhere(Predicate) List~T~
+}
+class DataStore {
+  +save(List, List)
+  +loadCustomers() List
+  +loadAccounts() List
+  +loadTransactions() List
+}
+
+class MenuController {
+  -Map~Integer,MenuItem~ menu
+  +run()
+}
+class Main {
+  +main(String[]) void
+}
+class InputHelper {
+  +readInt(String,int,int) int
+  +readAmount(String) double
+  +readNonEmpty(String) String
+  +confirm(String) boolean
+}
+
+Account <|-- SavingsAccount
+Account <|-- CheckingAccount
+Account <|-- TimeDepositAccount
+Customer "1" o-- "0..*" Account : owns
+Account "1" *-- "0..*" Transaction : history
+Transaction --> TransactionType
+Account --> InterestFeeStrategy : strategy
+InterestFeeStrategy <|.. AccountRates
+BankService o-- AccountObserver : notifies
+BankService *-- Repository : customers, accounts
+BankService --> DataStore
+BankService ..> AccountFactory : uses
+AccountFactory ..> Account : creates
+AccountFactory ..> AccountRates : assigns
+AccountObserver ..> BankConfig
+CheckingAccount ..> BankConfig
+AccountFactory ..> BankConfig
+DataStore ..> AccountFactory : restore
+MenuController --> BankService
+MenuController --> InputHelper
+Main ..> MenuController : starts
+Main ..> AccountObserver : registers

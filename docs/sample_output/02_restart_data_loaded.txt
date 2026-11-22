@@ -1,0 +1,90 @@
+[INFO] Loaded 2 customer(s) and 3 account(s).
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 10
+
+=== All Accounts ===
+Account  Type          Owner                         Balance  Status
+----------------------------------------------------------------------
+A-1001   SAVINGS       Juan Dela Cruz              68,141.67  OPEN
+A-1002   CHECKING      Juan Dela Cruz                 400.10  OPEN
+A-1003   TIME_DEPOSIT  Maria Santos                50,208.33  OPEN
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 8
+Account number: A-1002
+
+=== Statement: A-1002 (CHECKING) ===
+Owner : Juan Dela Cruz (C-001)
+Opened: 2026-11-21    Status: OPEN
+Checking: overdraft limit PHP 2,000.00
+
+Date             Txn ID   Type                  Amount        Balance  Description
+----------------------------------------------------------------------------------------
+2026-11-21 11:49 T-00002  DEPOSIT            +6,000.00       6,000.00  Opening deposit
+2026-11-21 11:49 T-00005  WITHDRAWAL         -7,500.00      -1,500.00  Cash withdrawal
+2026-11-21 11:49 T-00007  TRANSFER_IN        +2,000.00         500.00  Transfer from A-1001
+2026-11-21 11:49 T-00009  INTEREST               +0.10         500.10  Monthly interest
+2026-11-21 11:49 T-00010  FEE                  -100.00         400.10  Monthly maintenance fee
+----------------------------------------------------------------------------------------
+Current balance: PHP 400.10
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 9
+Customer ID: C-002
+
+=== Customer Summary ===
+Customer: Maria Santos (C-002)    Contact: 09281234567
+Account  Type                 Balance  Status
+------------------------------------------------
+A-1003   TIME_DEPOSIT       50,208.33  OPEN
+------------------------------------------------
+Open accounts: 1    Total balance: PHP 50,208.33
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 11
+[INFO] Data saved. Goodbye!

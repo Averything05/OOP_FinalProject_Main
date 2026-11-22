@@ -1,0 +1,194 @@
+[INFO] Loaded 3 customer(s) and 5 account(s).
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 10
+
+=== All Accounts ===
+Account  Type          Owner                         Balance  Status
+----------------------------------------------------------------------
+A-1001   SAVINGS       Juan Dela Cruz              15,000.00  OPEN
+A-1002   CHECKING      Juan Dela Cruz               8,200.00  OPEN
+A-1003   TIME_DEPOSIT  Maria Santos                50,000.00  OPEN
+A-1004   SAVINGS       Maria Santos                   450.00  OPEN
+A-1005   TIME_DEPOSIT  Pedro Reyes                 20,000.00  OPEN
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 5
+Account number: A-1003
+Amount to withdraw (PHP): 10000
+[SUCCESS] Withdrew PHP 10,000.00 from A-1003. New balance: PHP 40,000.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 5
+Account number: A-1005
+Amount to withdraw (PHP): 100
+[ERROR] Time deposit A-1005 has not matured. Funds can be withdrawn on 2027-09-01.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 5
+Account number: A-1004
+Amount to withdraw (PHP): 100
+[ALERT] Low balance: A-1004 now has PHP 350.00 (below PHP 500.00).
+[SUCCESS] Withdrew PHP 100.00 from A-1004. New balance: PHP 350.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 4
+Account number: A-1003
+Amount to deposit (PHP): 500
+[ERROR] Time deposit A-1003 does not accept additional deposits.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 3
+Account number to close: A-1004
+[INFO] A-1004 balance: PHP 350.00
+Close this account and pay out the balance? (y/n): y
+[SUCCESS] Account A-1004 closed. Paid out PHP 350.00.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 4
+Account number: A-1004
+Amount to deposit (PHP): 100
+[ERROR] Account A-1004 is closed.
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 8
+Account number: A-1003
+
+=== Statement: A-1003 (TIME_DEPOSIT) ===
+Owner : Maria Santos (C-002)
+Opened: 2025-06-01    Status: OPEN
+Time deposit: 12 months, matures 2026-06-01 (matured)
+
+Date             Txn ID   Type                  Amount        Balance  Description
+----------------------------------------------------------------------------------------
+2025-06-01 09:00 T-00001  DEPOSIT           +50,000.00      50,000.00  Opening deposit
+2026-11-21 11:50 T-00011  WITHDRAWAL        -10,000.00      40,000.00  Cash withdrawal
+----------------------------------------------------------------------------------------
+Current balance: PHP 40,000.00
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 9
+Customer ID: C-002
+
+=== Customer Summary ===
+Customer: Maria Santos (C-002)    Contact: 09281234567
+Account  Type                 Balance  Status
+------------------------------------------------
+A-1003   TIME_DEPOSIT       40,000.00  OPEN
+A-1004   SAVINGS                 0.00  CLOSED
+------------------------------------------------
+Open accounts: 1    Total balance: PHP 40,000.00
+
+=== CvSU Bank - Account Management ===
+[1] Register customer
+[2] Open account
+[3] Close account
+[4] Deposit
+[5] Withdraw
+[6] Transfer
+[7] Apply monthly interest and fees
+[8] Print account statement
+[9] Customer summary
+[10] List all accounts
+[11] Save and exit
+Enter choice [1-11]: 11
+[INFO] Data saved. Goodbye!
